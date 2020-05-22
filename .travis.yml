@@ -11,6 +11,8 @@ before_install:
   - sh ./binSH/IP
   - sh ./binSH/IPr
   ###########
+  #- 安裝MySQL
+  - sh ./binSH/MysqlAdmin.sh
     #-建立 SSH資料夾
   # - mkdir -p $HOME/.ssh
   # - echo $HOME
