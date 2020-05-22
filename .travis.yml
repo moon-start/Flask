@@ -12,7 +12,11 @@ before_install:
   - sh ./binSH/IPr
   ###########
   #- 安裝MySQL
-  - sh ./binSH/MysqlAdmin.sh
+  # - sh ./binSH/MysqlAdmin.sh
+  - apt-get -qq update                         >> log.txt                        
+  - apt-get -qq dist-upgrade                   >> log.txt    
+  ## 首先安裝MySQL client 和 server ：
+  - apt-get  -qq install mysql-client mysql-server        >> log.txt  
     #-建立 SSH資料夾
   # - mkdir -p $HOME/.ssh
   # - echo $HOME
